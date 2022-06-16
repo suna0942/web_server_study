@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>hello-web</display-name>
+  <!-- 배포서술자 Deployment Descriptor -->
+  
+  <!-- servlet과 servlet-mapping은 짝꿍이므로 같이 써줘야한다. -->
+  <servlet>
+  	<servlet-name>TestPersonServvvvlet1</servlet-name>
+  	<servlet-class>com.kh.web.TestPersonServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestPersonServvvvlet1</servlet-name>
+  	<url-pattern>/testPerson1.do</url-pattern>
+  	<!-- 반드시 / 로 시작해야한다. / 를 빼먹으면 서버가 실행되지 않음 -->
+  	<!--  url-pattern에 있는 요청이 들어오면 servlet-name과 동일한것을 실행해라 -->
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>TestPersonServvvvlet2</servlet-name>
+  	<servlet-class>com.kh.web.TestPersonServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestPersonServvvvlet2</servlet-name>
+  	<url-pattern>/testPerson2.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
